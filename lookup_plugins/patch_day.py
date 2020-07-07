@@ -20,6 +20,10 @@ from ansible.errors import AnsibleError, AnsibleParserError
 from ansible.plugins.lookup import LookupBase
 from ansible.utils.display import Display
 
+import calendar
+from datetime import datetime
+from datetime import timedelta
+
 display = Display()
 
 
@@ -36,10 +40,6 @@ class LookupModule(LookupBase):
       display.vvvv(u"Second tuesday lookup using %s as offset days" % term)
       try:
         if term:
-          import calendar
-          from datetime import datetime
-          from datetime import timedelta
-
           # Use todays year and month as a base for the calculation
           year = int(datetime.today().strftime("%Y"))
           month = int(datetime.today().strftime("%m"))
