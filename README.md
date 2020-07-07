@@ -1,9 +1,9 @@
 # ansible-advanced-scheduling
-An advanced scheduling lookup to allow patching an arbitrary number of days after patch tuesday
+An sample way to use a lookup to only run a set of tasks in a block on a particular day of the month - basically the default is 18 days past the second tuesday of the month.  
 
 ## Instructions for using this lookup plugin
 
-You'll need to either copy the patch_day.py file into your own lookup_plugins folder in your ansible workspace or clone this and modify the test.yml to your particular task.
+You'll need to either copy the patch_day.py file into your own lookup_plugins folder in your ansible playbooks workspace or clone this and modify the test.yml to your particular task.
 
 Set the variable for the lookup:
 ```
