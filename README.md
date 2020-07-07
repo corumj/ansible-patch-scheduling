@@ -1,5 +1,5 @@
 # ansible-advanced-scheduling
-An advanced scheduling lookup to allow patching 18 days after patch tuesday
+An advanced scheduling lookup to allow patching an arbitrary number of days after patch tuesday
 
 ## Instructions for using this lookup plugin
 
