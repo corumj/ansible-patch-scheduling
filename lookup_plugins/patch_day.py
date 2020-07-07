@@ -6,9 +6,9 @@ DOCUMENTATION = """
   lookup: second_tuesday
   author: Jerry Corum <jcorum@redhat.com>
   version_added: "0.1"
-  short_description: return second tuesday of month
+  short_description: return desired patch day
   description:
-      - This lookup returns the second tuesday of the month.
+      - This lookup returns a patch day based on the second tuesday of the month plus an offset.
   options:
     _terms:
       description: offset example 18 will provide the date of the second tuesday plus 18 days
