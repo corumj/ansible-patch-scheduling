@@ -1,0 +1,12 @@
+---
+- name: Test using a custom lookup to find patch tuesday with an 18 day offset
+  hosts: localhost
+  vars:
+    offset: 18
+    patch_day: "{{ lookup('patch_day', '{{ offset }}') }}"
+  tasks:
+    - name: Run tasks if it's time 
+      block:
+        - debug: 
+            msg: "Hello World"
+      when: ansible_date_time['date'] == patch_day
