@@ -3,7 +3,7 @@ from __future__ import (absolute_import, division, print_function)
 __metaclass__ = type
 
 DOCUMENTATION = """
-  lookup: second_tuesday
+  lookup: patch_day
   author: Jerry Corum <jcorum@redhat.com>
   version_added: "0.1"
   short_description: return desired patch day
