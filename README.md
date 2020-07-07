@@ -22,3 +22,5 @@ In your playbook, use a block to set a conditional for a range of tasks.
             msg: "Hello World"
       when: ansible_date_time['date'] == patch_day
 ```
+
+For this to work you would need to schedule the job in Ansible Tower to run daily - it will only execute the block of code on patch day.
