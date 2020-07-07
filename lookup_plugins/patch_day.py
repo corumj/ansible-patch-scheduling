@@ -40,6 +40,7 @@ class LookupModule(LookupBase):
           from datetime import datetime
           from datetime import timedelta
 
+          # Use todays year and month as a base for the calculation
           year = int(datetime.today().strftime("%Y"))
           month = int(datetime.today().strftime("%m"))
 
@@ -47,10 +48,12 @@ class LookupModule(LookupBase):
 
           monthcal = c.monthdatescalendar(year,month)
 
+          # Get the second tuesday of the current month
           second_tuesday = [day for week in monthcal for day in week if \
                           day.weekday() == calendar.TUESDAY and \
                           day.month == month][1]
 
+          # Calculate the desired patch day based of the current month's second tuesday and the offset
           patch_day = second_tuesday + timedelta(days=int(term)) 
 
           ret.append(patch_day)
